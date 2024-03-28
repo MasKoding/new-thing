@@ -1,0 +1,57 @@
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+ background-color: crimson;
+ color: #fff;
+}
+.animate-text {
+  height: 90px;
+  overflow: hidden;
+ 
+}
+
+.animate-text span{
+    font-size: 40px;
+    border:  2px solid #fff;
+    padding: 20px;
+    width: 450px;
+    font-weight: 700;
+    line-height: 46px;
+    display: none;
+}
+
+.animate-text span.text-in{
+	display: block;
+	animation: textIn .5s ease;
+}
+.animate-text span.text-out{
+	animation: textOut 1s ease;
+}
+.animate-text span{
+  
+}
+@keyframes textIn{
+	0%{
+		transform: translateY(100%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}
+@keyframes textOut{
+	0%{
+		transform: translateY(0%);
+	}
+	100%{
+		transform: translateY(-100%);
+
+	}
+}
+
+
+

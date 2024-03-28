@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Blur Image</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+        ::root{
+            --x:50%;
+            --y:50%;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            overflow: hidden;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            font-family: "Montserrat";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        #bg,#bg-mask{
+            position: absolute;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="bg"></div>
+    <div id="bg-mask"></div>
+    <main>
+        <h1>Hello World</h1>
+    </main>
+    <script>
+        "use strict";
+        console.clear();
+
+        var root = document.querySelector(":root")
+        function spotLight(e){
+            root.style.setProperty("--x",e.pageX+"px")
+            root.style.setProperty("--y",""+e.pageY+"px")
+        }
+
+        document.addEventListener("pointermove",spotLight)
+        document.addEventListener("pointerdown",spotLight)
+
+    </script>
+</body>
+</html>
